@@ -1,2 +1,8 @@
 .env
+<<<<<<< HEAD
 .docker
+=======
+.docker
+rabbitmq/data
+rabbitmq/logs
+>>>>>>> Tweaks on gitignore
