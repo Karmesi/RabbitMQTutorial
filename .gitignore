@@ -1,4 +1,6 @@
 .env
 .docker
+.vscode
 rabbitmq/data
 rabbitmq/logs
+flaskApp/env

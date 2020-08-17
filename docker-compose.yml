@@ -1,9 +1,17 @@
 version: '3'
 
 services:
+  web:
+    build: .
+    ports:
+      - 5000:5000
+    links:
+      - rabbitmq
+    volumes:
+      - ./flaskApp:/var/www/app
   rabbitmq:
     image: rabbitmq:3-management-alpine
-    hostname: my-rabbit
+    hostname: rabbit
     volumes:
       - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
       - ./rabbitmq/etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
